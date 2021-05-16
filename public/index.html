@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hero of the village</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="script.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="icon"
+          type="image/png"
+          href="https://icons.iconarchive.com/icons/fixicon/crown/256/medieval-icon.png">
+</head>
+<body id="idle">
+<audio autoplay controls id="music-idle" src="https://dl.dropboxusercontent.com/s/6ewwjmip0zk4gnb/idle.mp3"
+       loop></audio>
+<audio autoplay controls id="music-game" src="https://dl.dropboxusercontent.com/s/6b11q0mpmabuxws/fight.mp3"
+       loop></audio>
+<div id="idle-menu" style="height: 100vh" class="d-flex justify-content-center align-items-center">
+    <div id="play" class="d-flex justify-content-center align-items-center play-animation">Play!</div>
+</div>
+<div id="selection-menu" style="height: 100vh" class="d-flex justify-content-center align-items-center">
+    <div id="menu" class="d-flex flex-column align-items-center">
+        <h1 style="margin-top: 10px">Select you hero</h1>
+        <div id="selection">
+            <div class="frame d-flex align-items-center justify-content-center flex-column">
+                <h1>Mage</h1>
+                <img class="hero-img"
+                     src="https://www.pngkey.com/png/detail/347-3476576_black-mage-minecraft-pixel-art-black-mage.png"
+                     alt="">
+                <div class="hero-description">
+                    <h3>Max damage: <span class="span">7</span></h3>
+                    <h3>Special: <span class="span">30% chance to heal 30hp on hit</span></h3>
+                </div>
+                <div class="select">Select !</div>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="d-flex" style="padding: 5px">
+            <input id="name" type="text" placeholder="Enter your name">
+            <div id="submit-name" class="select">Play !</div>
+        </div>
+    </div>
+</div>
+<div id="game">
+    <div class="playerCard player1 player d-flex align-items-center flex-column"></div>
+    <div class="mid d-flex align-items-center justify-content-center">
+        <div id="ready-btn" class="d-flex justify-content-center align-items-center">Ready?</div>
+        <div id="attack-div"  class="d-flex flex-column justify-content-center align-items-center">
+            <h2 id="turn"></h2>
+        <div id="attack"></div>
+        </div>
+    </div>
+    <div class="playerCard player2 player d-flex align-items-center flex-column"></div>
+</div>
+<div id="black" class="d-flex justify-content-center align-items-center">
+    dssad
+
+</div>
+</body>
+</html>

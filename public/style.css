@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    font-family: 'MedievalSharp', cursive;
+}
+#idle {
+    background-image: url("https://cdna.artstation.com/p/assets/images/images/018/664/876/large/cmy-cai-camelotfinal-01.jpg?1560252368") ;
+}
+#music-idle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+#music-idle:hover {
+    opacity: 50%;
+}
+#music-game {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+#music-game:hover {
+    opacity: 50%;
+}
+#idle-menu {
+    display: flex;
+}
+#play {
+    background-image: url("https://www.nicepng.com/png/full/13-131202_wood-clipart-blank-wooden-sign-clipart.png");
+    height: 160px;
+    width: 400px;
+    background-size: cover;
+    font-size: 64px;
+    color: #50270b;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#play:hover {
+    transform: scale(1.01);
+}
+#play:active {
+    transform: scale(0.99);
+}
+/*flex*/
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+.flex-column {
+    flex-direction: column;
+}
+/*classes*/
+/*play-animation-class*/
+.play-animation {
+    top: 40%;
+    position: absolute;
+    animation-duration: 5s;
+}
+/*selection-menu*/
+#selection-menu {
+    display: none;
+}
+#menu {
+    position: absolute;
+    top: 15%;
+    animation-duration: 2s;
+    animation-direction: inherit;
+    background-image: url("https://i.pinimg.com/originals/6f/94/11/6f9411a62125250bdf24568ee64dd859.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #b37c1e;
+    width: 900px;
+    height: 500px;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 12px 0 rgba(0,0,0,0.75);
+}
+#selection {
+    display: grid;
+    grid-template-columns: 280px 280px 280px;
+    grid-template-rows: 400px;
+    grid-column-gap: 10px;
+}
+.frame {
+    padding: 10px;
+    border: 4px ridge saddlebrown;
+    border-radius: 15px;
+}
+.hero-img {
+    height: 175px;
+    width: 175px;
+    border: 4px ridge saddlebrown;
+}
+.hero-description {
+    padding: 10px;
+}
+.span {
+    font-size: 16px;
+}
+.select {
+    font-size: 24px;
+    padding: 5px;
+    border: 4px ridge saddlebrown;
+    background-color: #cb8b21;
+    cursor: pointer;
+}
+.select:active {
+    transform: scale(0.97);
+}
+#name {
+    border: 4px ridge saddlebrown;
+    font-size: 16px;
+    outline: none;
+    background-color: azure;
+}
+/*game*/
+#black {
+    animation-duration: 2.1s;
+    display: none;
+    top: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-size: 80px;
+    color: azure;
+}
+#game {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}
+.game-img {
+    border: 4px ridge saddlebrown;
+    width: 240px;
+
+}
+#turn {
+    background-color: saddlebrown;
+    border-radius: 7px;
+}
+.player1 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 5;
+}
+.mid {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+.player2 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 5;
+}
+#attack-div {
+    display: none;
+}
+#attack {
+    background-image: url("https://i.imgur.com/RHlGXvS.png");
+    width: 100px;
+    height: 100px;
+    background-position: top;
+    background-size: cover;
+    border-radius: 50%;
+    border: 5px ridge #aa8509;
+    cursor: pointer;
+}
+#attack:hover {
+    transform: scale(1.01);
+}
+#attack:active {
+    transform: scale(0.99);
+}
+#ready-btn {
+    width: 200px;
+    height: 85px;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+    background-size: cover;
+    background-image: url("https://www.nicepng.com/png/full/13-131202_wood-clipart-blank-wooden-sign-clipart.png");
+}
+#ready-btn:hover {
+    transform: scale(1.01);
+}
+#ready-btn:active {
+    transform: scale(0.99);
+}
+.playerCard {
+    padding: 15px;
+    border: 5px ridge saddlebrown;
+    background-color: #50270b;
+    border-radius: 5px;
+    box-shadow: 10px 10px 12px 0 rgba(0,0,0,0.75);
+}
+.info {
+    width: 100%;
+    margin-top: 25px;
+}
+.bar {
+    margin: 20px 0 20px 0;
+    width: 100%;
+    height: 25px;
+    background-color: #8d0000;
+    border: 2px ridge saddlebrown;
+    overflow: hidden;
+}
+.health {
+    background-color: #6ca118;
+    width: 0;
+    height: 100%;
+    border-right: 2px ridge saddlebrown;
+}
+/*ANIMATIONS*/
+@keyframes play-animation {
+    0%{}
+    100%{
+        top: -8000px
+    }
+}
+@keyframes selection-animation {
+    0%{top: -1000px}
+    100%{
+        top: 15%
+    }
+}
+@keyframes game-start {
+    0%{top: 15%}
+    100%{
+        top: -1000px
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 100%;
+    }
+    100% {opacity: 100%}
+}
